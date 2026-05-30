@@ -1,0 +1,19 @@
+[alias]
+	a = add
+	b = branch
+	br = branch
+	c = commit
+	d = diff
+	l = log
+	s = status
+	st = status
+	sw = switch
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[user]
+	name = Vetle Ledaal
+	email = vetle.ledaal@gmail.com
