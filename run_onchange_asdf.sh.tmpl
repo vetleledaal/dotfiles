@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# .tool-versions hash: {{ include "dot_tool-versions" | sha256sum }}
+
+. "$HOME/.asdf/asdf.sh"
+
+expect=$(awk '{print $1}' "$HOME/.tool-versions" | sort)
+actual=$(asdf plugin list | sort)
+
+comm -13 <(echo "$expect") <(echo "$actual") | xargs -rn1 asdf plugin remove
+comm -23 <(echo "$expect") <(echo "$actual") | xargs -rn1 asdf plugin add
+
+asdf install
