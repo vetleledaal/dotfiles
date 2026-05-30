@@ -5,3 +5,8 @@
 brew install chezmoi
 chezmoi init git@github.com:vetleledaal/dotfiles.git
 ```
+
+## TODO
+
+- Install `cargo`
+- Install `uv`

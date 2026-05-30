@@ -3,4 +3,12 @@ set -euo pipefail
 
 # .Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
 
+managed=(--formula --tap --cargo --uv)
+
+if ! brew bundle cleanup --global "${managed[@]}"; then
+  read -rp "Proceed? [y/N] " reply
+  if [[ ${reply,,} == y ]]; then
+    brew bundle cleanup --global "${managed[@]}" --force
+  fi
+fi
 brew bundle install --global
