@@ -7,3 +7,4 @@ gradle 9.6.1
 java temurin-26.0.1+8
 nodejs 26.5.0
 zig 0.16.0
+pnpm 11.14.0
