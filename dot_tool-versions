@@ -1,10 +1,9 @@
-bun 1.4.2
-deno 2.9.7
+bun 1.4.3
 elixir 1.20.4-otp-29
-erlang 29.1.1
-golang 1.27.1
+erlang 29.1.2
+golang 1.27.2
 gradle 9.6.1
 java temurin-26.0.2+101
-nodejs 26.10.0
+nodejs 26.12.0
 zig 0.17.0
-pnpm 12.10.1
+pnpm 12.14.0
